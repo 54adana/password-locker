@@ -11,22 +11,31 @@ class TestCredentials(unittest.TestCase):
      # Items up here .......
 
     def setUp(self):
-        '''
+        
         Set up method to run before each test cases.
-        '''
-        self.new_contact = Contact("James","Muriuki","0712345678","james@ms.com") # create contact object
+        
+        self.new_contact = Contact("Yette","Adana","yvette754","yvetteadan2000@gmail.com") # create password object
 
 
     def test_init(self):
-        '''
+        
         test_init test case to test if the object is initialized properly
-        '''
+        
 
-        self.assertEqual(self.new_contact.first_name,"James")
-        self.assertEqual(self.new_contact.last_name,"Muriuki")
-        self.assertEqual(self.new_contact.phone_number,"0712345678")
-        self.assertEqual(self.new_contact.email,"james@ms.com")
+        self.assertEqual(self.new_credentials.first_name,"Yvette")
+        self.assertEqual(self.new_credentials.last_name,"Adana")
+        self.assertEqual(self.new_credentials.password,"yvette754")
+        self.assertEqual(self.new_credentials.email,"yvetteadan2000@gmail.com")
 
 
-if __name__ == '__main__':
+
+def test_save_password(self):
+        
+        test_save_password test case to test if the password object is saved into
+         the password list
+    
+        self.new_passworg.save_password() # saving the new password
+        self.assertEqual(len(Credentials.credentials_list),1)
+
+if __name__ ==  '__main__':
     unittest.main()
