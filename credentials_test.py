@@ -60,7 +60,7 @@ class TestCredentials(unittest.TestCase):
 
         found_credentials = Credentials.find_by_credentials("credentials")
 
-        self.assertEqual(found_credentials.email,test_credentials.email)        
+        self.assertEqual(found_credentials.credentials,test_credentials.password)        
 
 if __name__ ==  '__main__':
     unittest.main() # self.assertEqual(len(Credentials.credentials_list),)
