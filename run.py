@@ -6,3 +6,8 @@ def create_contact(fname,lname,password,email):
     '''
     new_credentials = credentials(fname,lname,phone,email)
     return new_credentials
+def save_credentials(credentials):
+    '''
+    Function to save credentials
+    '''
+    contact.save_credentials()
