@@ -16,3 +16,9 @@ def del_credentials(credentials):
     Function to delete a credentials
     '''
     contact.delete_credentials()
+
+def find_credentials(credentials):
+    '''
+    Function that finds a credentiuals by number and returns the contact
+    '''
+    return Contact.find_by_credentials(credentials)
