@@ -21,6 +21,7 @@ class Credentials:
             # save_password method saves password objects into password_list
     def save_credentials(self):
         Credentials.credential_list.append(self)
+        
 
     @classmethod
     def find_by_credentials(cls,password):
