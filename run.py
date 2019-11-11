@@ -19,6 +19,12 @@ def del_credentials(credentials):
 
 def find_credentials(credentials):
     '''
-    Function that finds a credentiuals by number and returns the contact
+    Function that finds a credentiuals by email and returns the password
     '''
     return Contact.find_by_credentials(credentials)
+
+    def check_existing_email(password):
+    '''
+    Function that check if a email exists with that password and return a Boolean
+    '''
+    return Credentials.credentials_exist(password)
