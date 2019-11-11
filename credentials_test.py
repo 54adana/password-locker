@@ -44,23 +44,23 @@ class TestCredentials(unittest.TestCase):
     def delete_credentials(self):
 
         '''
-        delete_credentials method deletes a saved contact from the credentials_list
+        delete_credentials method deletes a saved credentials from the credentials_list
         '''
 
         Credentials.credentials_list.remove(self)
 
-        def test_find_contact_by_number(self):
+    def test_find_credentials_by_password(self):
         '''
         test to check if we can find a contact by phone number and display information
         '''
 
-        self.new_contact.save_contact()
-        test_contact = Contact("Test","user","0711223344","test@user.com") # new contact
-        test_contact.save_contact()
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("first_name","last_name","password","first_name@last_name.com") # new credentials
+        test_credentials.save_credentials()
 
-        found_contact = Contact.find_by_number("0711223344")
+        found_credentials = Credentials.find_by_credentials("credentials")
 
-        self.assertEqual(found_contact.email,test_contact.email)        
+        self.assertEqual(found_credentials.email,test_credentials.email)        
 
 if __name__ ==  '__main__':
     unittest.main() # self.assertEqual(len(Credentials.credentials_list),)
