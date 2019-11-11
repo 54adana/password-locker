@@ -42,3 +42,10 @@ class Credentials:
     def copy_email(cls,email):
         credentials_found = Credentials.find_by_email(email)
         pyperclip.copy(credentials_found.email)
+         
+    @classmethod
+    def display_credentials(cls):
+        '''
+        method that returns the credentials list
+        '''
+        return cls.credentials_list
