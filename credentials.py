@@ -20,4 +20,17 @@ class Credentials:
     def save_credentials(self):
         Credentials.credential_list.append(self)
 
-    
+    @classmethod
+    def find_by_credentials(cls,password):
+        '''
+        Method that takes in a password and returns a credential that matches that password.
+
+        Args:
+            password: password to search for
+        Returns :
+            Credentials of person that matches the password.
+        '''
+
+        for password in cls.credentials_list:
+            if credentials.password == password:
+                return password
