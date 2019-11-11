@@ -2,9 +2,10 @@ class Credentials:
 
      
 
-    password_list = []# Empty password list
+    credential_list = []# Empty password list
      # Init method up here
-     def save_password(self)
+    def save_credentials(self):
+        pass
  
     def __init__(self,first_name,last_name,password,email):
 
@@ -15,8 +16,8 @@ class Credentials:
             self.password= password
             self.email = email
 
-            save_password method saves password objects into password_list
-
-            Credentials.password_list.append(self)
+            # save_password method saves password objects into password_list
+    def save_credentials(self):
+        Credentials.credential_list.append(self)
 
     
