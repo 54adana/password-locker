@@ -38,7 +38,7 @@ class Credentials:
             if credentials.password == password:
                 return password
 
-                @classmethod
-    def copy_email(cls,password):
+    @classmethod
+    def copy_email(cls,email):
         credentials_found = Credentials.find_by_email(email)
         pyperclip.copy(credentials_found.email)
