@@ -1,5 +1,5 @@
 #!/usr/bin/env python3.6
-from credentials import credentials
+from credentials import Credentials
 def create_credentials(fname,lname,password,email):
     '''
     Function to create a new credentials
@@ -28,8 +28,9 @@ def check_existing_email(password):
     Function that check if a email exists with that password and return a Boolean
     '''
     return Credentials.credentials_exist(password)
-    def main():
-    print("Hello Welcome to your credentials list. What is your name?")
+def main():
+    
+            print("Hello Welcome to your credentials list. What is your name?")
             user_name = input()
 
             print(f"Hello {user_name}. what would you like to do?")
@@ -98,4 +99,6 @@ def check_existing_email(password):
                     else:
                             print("I really didn't get that. Please use the short codes")
 if __name__ == '__main__':
-main()
+    main()
+
+    
