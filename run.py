@@ -1,27 +1,44 @@
 #!/usr/bin/env python3.6
-from credentials import Credentials
-def create_credentials(fname,lname,password,email):
+from credentials import User,Credentials
+def create_user(first_name,last_name,phone_number,email):
+    '''
+    Function to create a new user
+    '''
+    new_user = user(first_name,last_name,phone_number,email)
+    return new_user
+def save_user(user_name):
+    '''
+    Function to save user
+    '''
+    user.save_user()
+def del_user(user):
+    '''
+    Function to delete a user
+    '''
+    user.delete_user()
+
+def create_credentials(account,password,user_name):
     '''
     Function to create a new credentials
     '''
-    new_credentials = credentials(fname,lname,password,email)
+    new_credentials = credentials(account,password,user_name)
     return new_credentials
 def save_credentials(credentials):
     '''
     Function to save credentials
     '''
-    contact.save_credentials()
+    credentials.save_credentials()
 def del_credentials(credentials):
     '''
     Function to delete a credentials
     '''
-    contact.delete_credentials()
+    credentials.delete_credentials()
 
 def find_credentials(credentials):
     '''
     Function that finds a credentiuals by email and returns the password
     '''
-    return Contact.find_by_credentials(credentials)
+    return credentials.find_by_password(password)
 
 def check_existing_email(password):
     '''
@@ -58,7 +75,7 @@ def main():
                             e_address = input()
 
 
-                            save_credentials(create_credentials(f_name,l_name,password,e_address)) # create and save new credentials.
+                        #     save_credentials(create_credentials(f_name,l_name,password,e_address)) # create and save new credentials.
                             print ('\n')
                             print(f"New password {f_name} {l_name} created")
                             print ('\n')
@@ -69,7 +86,7 @@ def main():
                                     print("Here is a list of all your passwords")
                                     print('\n')
 
-                                    for credentials in display_credentials():
+                                    for credentials in _all_credentials():
                                             print(f"{credentials.first_name} {credentials.last_name} .....{credentials.password}")
 
                                     print('\n')
@@ -83,7 +100,7 @@ def main():
                             print("Enter the password you want to search for")
 
                             search_password = input()
-                            if check_existing_credentials(search_number):
+                            if check_existing_credentials(password):
                                     search_credentials = find_password(search_password)
                                     print(f"{search_credentials.first_name} {search_credentials.last_name}")
                                     print('-' * 20)
